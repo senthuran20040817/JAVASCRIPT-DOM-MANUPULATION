@@ -1,25 +1,32 @@
-//================ classses, constructors & object creation ================
-class Customer{
-    name;
-    age;
-    address;
+//================ usual and easiest object creation ================
 
-    constructor(name , age , address){
-        this.name = name;
-        this.age = age;
-        this.address = address;
+let student = [
+    {
+        name: "John Doe",
+        age: 30,
+        address: "123 Main St",
+        marks: [
+            {
+                subject: "Science",
+                score: 85
+            },
+            {
+                subject: "Mathematics",
+                score: 80
+            }
+        ]
+    },
+    {
+        name: "Jane Smith",
+        age:25,
+        address: "456 Oak Ave"
+    },
+    {
+        name:"Alice Johnson",
+        age: 28,
+        address: "789 Elm St"
     }
-}
+]
 
-let customer1 = new Customer("Senthuran", 22, "Chilaw");
-console.log(customer1);
-let customer2 = new Customer("Thurkka", 22, "Chilaw");
-console.log(customer2);
-
-console.log(customer1.name);
-console.log(customer1.age);
-console.log(customer1.address);
-
-console.log(customer2.name);
-console.log(customer2.age);
-console.log(customer2.address);
+console.log(student[0].marks[1].score);  //prints 80
+console.log(student[0].marks[0].subject); //prints "Science"
